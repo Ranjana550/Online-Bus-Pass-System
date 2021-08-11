@@ -1,0 +1,55 @@
+<html>
+<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		body{
+		  background-color: white;
+		  background-image:
+		                    url(banner_bg.png),
+		                     url(about_bg.png);
+
+		}
+
+	</style>
+		</head>
+<body>
+	<a class="navbar-brand" href="index.html"> <img src="logo.jpg" alt="logo" height="100" width="100"> </a>
+<form name="frmUser" method="post" action="OTP.php">
+	<div class="tblLogin">
+		<?php
+			if(!empty($success == 1)) {
+		?>
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="tableheader" align="center"><b>Enter OTP<b></div>
+		<p style="color:#556AF7 ;" align="center"><b>Check your Messages for the OTP<b></p>
+
+		<div class="tablerow" align="center">
+			<input type="text" name="otp" placeholder="One Time Password" height="50px" width="50px" class="login-input" required >
+		</div>
+		<br>
+		<br>
+		<div class="tableheader" align="center"><input type="submit"   name="submit_otp" value="Submit" class="btnSubmit" ></div>
+		<?php
+			} else if ($success == 2) {
+        ?>
+		<p style="color:#31ab00;"></p>
+		<?php
+			}
+			else {
+		?>
+
+
+		<?php
+			}
+		?>
+		</body>
+		</html>
